@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.nav-btn{
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: none;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+
+ @media only screen and (max-width : 1024px){
+    .nav-btn{
+        display: block;
+        opacity: 1;
+    }
+
+        .FullBgColor{
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: 1.5rem;
+            background-color: rgb(10, 70, 72);
+            transition: 1s;
+            transform: translate(-100vh);
+            z-index: 1000;
+        }
+
+        .responsive_Nav{
+            transform: none;
+        }
+
+        .nav-close-btn{
+            position: absolute;
+            /* top: 2rem;
+            right: 2rem; */
+        }
+ }

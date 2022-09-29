@@ -11,7 +11,6 @@ import {
 import { NavLink } from "react-router-dom";
 import Pipeline from "./Pipeline";
 import TopSales from "./TopSales";
-import UserExperience from "./UserExperience";
 
 export default function Home() {
   return (
@@ -165,7 +164,6 @@ export default function Home() {
       {/* ELement of the Home Pages */}
       <Pipeline />
       <TopSales />
-      <UserExperience />
     </>
   );
 }

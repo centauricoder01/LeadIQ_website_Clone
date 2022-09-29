@@ -3,7 +3,7 @@ import Routers from "./components/Navbar/Routers";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <Navbar />
       <Routers/>
     </div>
   );
