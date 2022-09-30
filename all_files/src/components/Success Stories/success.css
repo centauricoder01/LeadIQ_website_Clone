@@ -1,0 +1,13 @@
+@media only screen and (max-width:800px) {
+.css-1t6lf04{
+    /* display: none; */
+    visibility: hidden;
+   }
+.Aftereight{
+    border: 2px solid red;
+}
+
+.hideComponents{
+    display: none;
+}
+}
