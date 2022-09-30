@@ -50,15 +50,19 @@ export default function Demo() {
   return (
     <>
       <Grid
-        templateColumns="repeat(2, 1fr)"
+        templateColumns={{
+          base: "repeat(1,1fr)",
+          md: "repeat(2,1fr)",
+          lg: "repeat(2,1fr)",
+        }}
         gap={6}
         w={"100%"}
         m="auto"
         justifyContent={"center"}
         textAlign="left"
         alignItems={"center"}
-        p="100"
-        pt="150"
+        p="10"
+        pt="200"
         bg={"red.100"}
       >
         {/* First Box start from here  */}
@@ -72,6 +76,7 @@ export default function Demo() {
               lineHeight={"shorter"}
               color="#063c4d"
               fontWeight={"semibold"}
+              w="100%"
             >
               Experience how LeadIQ boosts prospecting efficiently.
             </Heading>
@@ -158,7 +163,7 @@ export default function Demo() {
         </Box>
 
         {/* Second Box start from Here  */}
-        <Box bg="#063c4d" p={39} ml="20" borderRadius={"2xl"}>
+        <Box bg="#063c4d" borderRadius={"2xl"}>
           <Box border={"2px solid white"} p="10" borderRadius={"2xl"}>
             <form onSubmit={HandleSubmit}>
               {/* first */}

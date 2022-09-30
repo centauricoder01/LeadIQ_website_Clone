@@ -15,7 +15,7 @@ import TopSales from "./TopSales";
 export default function Home() {
   return (
     <>
-      <Box pt={100} bg="#042f3c" color="white">
+      <Box pt={150} bg="#042f3c" color="white">
         <Center m={5}>
           <Heading
             as="h2"
