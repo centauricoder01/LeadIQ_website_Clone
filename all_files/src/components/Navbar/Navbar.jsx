@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
-import { Box, Image, Text, Button, DarkMode } from "@chakra-ui/react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { Box, Image, Text, Button, DarkMode, space } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
-import "./Navbar.css";
 
 export default function Navbar() {
   const navRef = useRef();
@@ -20,8 +18,15 @@ export default function Navbar() {
       pb={5}
       bg="#042f3c"
       color="white"
-      gap={100}
-      // border={"2px solid red"}
+      gap={{
+        base: "5",
+        md: "40",
+        lg: "80",
+      }}
+      position="fixed"
+      width={"100%"}
+      margin="auto"
+      zIndex={100}
     >
       <Box>
         <NavLink to={"/"}>
@@ -36,45 +41,66 @@ export default function Navbar() {
         display="flex"
         alignItems="center"
         justifyContent="space-between"
-        gap={50}
+        gap={{
+          base: "5",
+          md: "20",
+          lg: "50",
+        }}
         ref={navRef}
         className="FullBgColor"
       >
-        <NavLink to={"/platform"}>
-          <Text fontSize="1xl">Platform</Text>
-        </NavLink>
         <NavLink to={"/success"}>
-          <Text fontSize="1xl">Success Stories</Text>
-        </NavLink>
-        <NavLink to={"/resources"}>
-          <Text fontSize="1xl">Resources</Text>
+          <Text
+            fontSize={{
+              base: "small",
+              md: "xl",
+              lg: "2xl",
+            }}
+          >
+            Stories
+          </Text>
         </NavLink>
         <NavLink to={"/pricing"}>
-          <Text fontSize="1xl">Pricing</Text>
+          <Text
+            fontSize={{
+              base: "small",
+              md: "xl",
+              lg: "2xl",
+            }}
+          >
+            Pricing
+          </Text>
         </NavLink>
 
         <Box>
           <NavLink to={"/demo"}>
             <DarkMode>
-              <Button colorScheme="green" borderRadius={50} h={12}>
-                Book A Demo
+              <Button
+                colorScheme="green"
+                borderRadius={50}
+                h={{
+                  base: "10",
+                  md: "35",
+                  lg: "35",
+                }}
+                w={{
+                  base: "30",
+                  md: "40",
+                  lg: "50",
+                }}
+                fontSize={{
+                  base: "sm",
+                  md: "md",
+                  lg: "xl",
+                }}
+              >
+                Book Demo
               </Button>
             </DarkMode>
           </NavLink>
         </Box>
         {/* showHide buttons */}
-        <Button
-          onClick={showNavbar}
-          colorScheme="red"
-          className="nav-btn nav-close-btn"
-        >
-          <FaTimes />
-        </Button>
       </Box>
-      {/* second showhide Buttons  */}
-      <Button onClick={showNavbar} colorScheme="green" className="nav-btn">
-        <FaBars />
-      </Button>
     </Box>
   );
 }
