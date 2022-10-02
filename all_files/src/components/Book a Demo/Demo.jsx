@@ -13,6 +13,7 @@ import {
   Select,
   Button,
 } from "@chakra-ui/react";
+import Fotter from "../Fotter/Fotter";
 
 export default function Demo() {
   const [formstate, setformstate] = useState({
@@ -63,7 +64,7 @@ export default function Demo() {
         alignItems={"center"}
         p="10"
         pt="200"
-        bg={"red.100"}
+        bg={"whiteAlpha.900"}
       >
         {/* First Box start from here  */}
         <Box>
@@ -237,6 +238,7 @@ export default function Demo() {
           </Box>
         </Box>
       </Grid>
+      <Fotter />
     </>
   );
 }

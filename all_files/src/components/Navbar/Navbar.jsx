@@ -60,17 +60,6 @@ export default function Navbar() {
             Stories
           </Text>
         </NavLink>
-        <NavLink to={"/pricing"}>
-          <Text
-            fontSize={{
-              base: "small",
-              md: "xl",
-              lg: "2xl",
-            }}
-          >
-            Pricing
-          </Text>
-        </NavLink>
 
         <Box>
           <NavLink to={"/demo"}>
