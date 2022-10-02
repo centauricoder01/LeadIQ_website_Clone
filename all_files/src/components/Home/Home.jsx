@@ -11,6 +11,8 @@ import {
 import { NavLink } from "react-router-dom";
 import Pipeline from "./Pipeline";
 import TopSales from "./TopSales";
+import TypingEffect from "./TypingEffect";
+import Fotter from "../Fotter/Fotter";
 
 export default function Home() {
   return (
@@ -33,20 +35,20 @@ export default function Home() {
         </Center>
         <Center>
           <Heading
-            as="h2"
-            size={{
-              base: "md",
-              md: "lg",
-              lg: "lg",
-            }}
-            noOfLines={{
-              base: "2",
-              md: "1",
-              lg: "1",
-            }}
+            // as="h2"
+            // size={{
+            //   base: "md",
+            //   md: "lg",
+            //   lg: "lg",
+            // }}
+            // noOfLines={{
+            //   base: "2",
+            //   md: "1",
+            //   lg: "1",
+            // }}
             textAlign={"center"}
           >
-            Build sales pipeline by prospecting smarter.
+            <TypingEffect />
           </Heading>
         </Center>
         <Center
@@ -164,6 +166,7 @@ export default function Home() {
       {/* ELement of the Home Pages */}
       <Pipeline />
       <TopSales />
+      <Fotter />
     </>
   );
 }

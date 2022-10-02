@@ -11,7 +11,6 @@ export default function Routers() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/success" element={<Success />} />
-
         <Route path="/pricing" element={<Priceing />} />
         <Route path="/demo" element={<Demo />} />
       </Routes>
